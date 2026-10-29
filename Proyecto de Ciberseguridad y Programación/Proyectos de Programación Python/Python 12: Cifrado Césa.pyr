@@ -1,0 +1,26 @@
+import string
+
+print("=== Cifrador César ===")
+
+def cifrar_cesar(mensaje, clave):
+    mensaje_cifrado = ""
+    
+    
+    for letra in mensaje:
+        if letra in string.ascii_letters:
+            if letra.isupper():
+                mensaje_cifrado += chr((ord(letra) - ord('A') + clave) % 26 + ord('A'))
+            else:
+                mensaje_cifrado += chr((ord(letra) - ord('a') + clave) % 26 + ord('a'))
+        else:
+            mensaje_cifrado += letra
+
+            #El codigo revisa si es una letra mayúscula o minúscula y desplaza las letras el número de posiciones que el usuario indica y al llegar a la letra "z" o "Z" el cifrado vuelve al incio
+    
+    return mensaje_cifrado
+
+mensaje = input("Ingresa el mensaje que deseas cifrar: ")
+clave = int(input("Número de desplazamiento: "))
+
+resultado = cifrar_cesar(mensaje, clave)
+print(f"Resultado: {resultado}")
