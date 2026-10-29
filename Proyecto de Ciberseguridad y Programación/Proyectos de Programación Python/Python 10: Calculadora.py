@@ -21,6 +21,8 @@ def opciones ():
         if otra_operacion.lower() == "s": #lower() convierte el texto en minúsculas
             mostrar_opciones()
             opciones()
+        else:
+             print("Cerrando la calculadora.")
     if operacion == "2":
         num1 = float(input("Ingresa el primer número: "))
         num2 = float(input("Ingresa el segundo número: "))
@@ -30,6 +32,8 @@ def opciones ():
         if otra_operacion.lower() == "s":
                     mostrar_opciones()
                     opciones()
+        else:
+            print("Cerrando la calculadora.")
     if operacion == "3":
         num1 = float(input("Ingresa el primer número: "))
         num2 = float(input("Ingresa el segundo número: "))
